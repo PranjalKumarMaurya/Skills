@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    object-fit: cover;
     padding: 0;
     border: 0;
     outline: 0;
@@ -17,6 +18,7 @@
    --color-white: #fff;
    --color-light: #f0f0f0;
    --color-black: #000000;
+   --color-bg1: #17356ef5;
    --color-bg2: #09489bf5;
    --color-bg3: #06326bf5;
 
@@ -155,7 +157,7 @@ header {
 /* -------------------Categories-------------------- */
 
 .categories {
-    background: var(--color-light);
+    /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
     margin-bottom: 5rem;
     height: 400px;
     object-fit: dense;
@@ -216,4 +218,169 @@ header {
 }
 .category p {
     font-size: 0.8rem;
+}
+
+/* -------------------Popular courses-------------------- */
+
+.courses {
+    margin-top: 17rem;
+    grid-column: 1/-1;
+}
+.courses h2 {
+    margin-left: 5rem;
+}
+.courses_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-column: 1/2;
+}
+.course {
+    background-color: var(--color-bg2);
+}
+.course_info {
+    color: #f0f0f0;
+    padding: 1rem;
+}
+.course_info p {
+    padding: 1rem 0 1.2rem;
+}
+.course_info a {
+    text-align: center;
+}
+
+/* -------------------FAQs-------------------- */
+
+.faqs {
+    margin-top: 7rem;
+    /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
+}
+.faqs h2 {
+    
+    margin-left: 5rem;
+}
+
+.faqs_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.faq {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    background: var(--color-bg2);
+    color: #f0f0f0;
+    cursor: pointer;
+    gap: 1.2rem;
+    transition: var(--transition);
+}
+.faq h2 {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+.faq_icon {
+    align-self: flex-start;
+    font-size: 1.2rem;   
+}
+.faq p {
+    margin-top: 0.7rem;
+    display: none;
+}
+.faq:hover p {
+    display: block;
+}
+.open p {
+    display: block;
+}
+
+/* -------------------Testimonials-------------------- */
+
+.testimonials_container {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+.testimonials_container h2 {
+    text-align: center;
+}
+
+.testimonial {
+    padding-top: 2rem;
+}
+.avatar {
+    width: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 0.3rem solid var(--color-bg2);
+}
+.testimonial_info {
+    text-align: center;
+}
+.testimonial_body {
+    background: var(--color-bg2);
+    color: #f0f0f0;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+.testimonial_body::before {
+    content: "";
+    display: block;
+    background: linear-gradient(135deg, transparent, var(--color-bg2), var(--color-bg2), var(--color-bg2));;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 47%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+/* -------------------Testimonials-------------------- */
+
+footer {
+    background: var(--color-bg2);
+    color: #f0f0f0;
+    padding: 5rem;
+}
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+.footer_container > div h4 {
+    margin-bottom: 1.5rem;
+}
+.footer_container ul li {
+    margin-bottom: 0.6rem;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.footer_2 a{
+    color: #f0f0f0;
+}
+.footer_3 a{
+    color: #f0f0f0;
+}
+.footer_socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    grid-column: 4;
+}
+.footer_socials a{
+    color: #f0f0f0;
+}
+.footer_copyright {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1.2rem o;
+    border-top: 1px solid var(--color-bg3);
 }
