@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    object-fit: cover;
     padding: 0;
     border: 0;
     outline: 0;
@@ -18,11 +17,11 @@
    --color-white: #fff;
    --color-light: #f0f0f0;
    --color-black: #000000;
-   --color-bg1: #17356ef5;
-   --color-bg2: #09489bf5;
-   --color-bg3: #06326bf5;
+   --color-bg: #1f2641;
+   --color-bg1: #2e3267;
+   --color-bg2: #424897;
 
-   --container-width-lg: 80%;
+   --container-width-lg: 90%;
    --container-width-md: 90%;
    --container-width-sm: 94%;
 
@@ -32,14 +31,16 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    color: var(--color-black);
-    background: white;
+    color: var(--color-white);
+    background: var(--color-bg);
 }
 
 .container {
-    width: var(--container-width-lg);
+    /* width: var(--container-width-lg); */
     margin: 0;
-    margin-left: 5rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 0;
 }
 
 .section {
@@ -69,7 +70,7 @@ h4 {
 }
 
 a {
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 img {
@@ -108,7 +109,8 @@ nav {
     z-index: 11;
 }
 .window-scroll {
-    background: rgba(57, 147, 255, 0.9);
+    transition: 1.5s ease;
+    background: rgba(0, 0, 0, 0.45);
     /* background: var(--color-primary); */
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
@@ -129,6 +131,7 @@ nav button {
 .nav__menu a {
     font-size: 0.9rem;
     transition: var(--transition);
+    color: #f0f0f0;
 }
 .nav__menu a:hover {
     color: var(--color-bg2);
@@ -138,19 +141,19 @@ nav button {
 
 header {
     position: relative;
-    top: 5rem;
     overflow: hidden;
     height: 70vh;
-    margin-bottom: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 .header__container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 5rem;
     height: 100%;
 }
-.header_left p {
+.header__left p {
     margin: 1rem 0 2.4rem;
 }
 
@@ -159,8 +162,13 @@ header {
 .categories {
     /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
     margin-bottom: 5rem;
-    height: 400px;
+    height: 380px;
     object-fit: dense;
+    background-color: var(--color-bg1);
+}
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
 }
 .categories_left {
     margin-top: 2rem;
@@ -209,7 +217,7 @@ header {
 } 
 
 .category_icon {
-    background: var(--color-bg3);
+    background: var(--color-primary);
     padding: 0.7rem;
     border-radius: 0.9rem;
 }
@@ -223,44 +231,54 @@ header {
 /* -------------------Popular courses-------------------- */
 
 .courses {
-    margin-top: 17rem;
-    grid-column: 1/-1;
+    margin-top: 12rem;
+    text-align: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 .courses h2 {
     margin-left: 5rem;
+    margin-bottom: 5rem;
+   
 }
 .courses_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
-    grid-column: 1/2;
 }
 .course {
     background-color: var(--color-bg2);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }
 .course_info {
     color: #f0f0f0;
-    padding: 1rem;
+    padding: 2rem;
 }
 .course_info p {
-    padding: 1rem 0 1.2rem;
+    padding: 1.2rem 0 2rem;
+    font-size: 0.9rem;
 }
 .course_info a {
-    text-align: center;
+    background-color: var(--color-danger);
+}
+.course:hover {
+    background: transparent;
+    border-color: var(--color-bg2);
 }
 
 /* -------------------FAQs-------------------- */
 
 .faqs {
-    margin-top: 7rem;
-    /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
+    background: var(--color-bg1);
+    margin-top: 12rem;
+    padding: 5rem;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }
 .faqs h2 {
-    
-    margin-left: 5rem;
+    text-align: center;
 }
-
 .faqs_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,7 +294,9 @@ header {
     color: #f0f0f0;
     cursor: pointer;
     gap: 1.2rem;
-    transition: var(--transition);
+}
+.faq:hover {
+    transition: 2s ease;
 }
 .faq h2 {
     font-size: 1rem;
@@ -302,11 +322,11 @@ header {
 .testimonials_container {
     overflow-x: hidden;
     position: relative;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+    margin: 5rem 15rem 5rem;
 }
 .testimonials_container h2 {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .testimonial {
@@ -347,7 +367,8 @@ header {
 footer {
     background: var(--color-bg2);
     color: #f0f0f0;
-    padding: 5rem;
+    padding: 5rem 5rem;
+    margin-top: 12rem;
 }
 .footer_container {
     display: grid;
@@ -381,6 +402,66 @@ footer {
 .footer_copyright {
     text-align: center;
     margin-top: 1rem;
-    padding: 1.2rem o;
-    border-top: 1px solid var(--color-bg3);
+    margin-bottom: 0;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg2);
+}
+
+/* -------------------Media Queries (Tablets)-------------------- */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+
+    /*--------------NavBar--------------*/
+
+   nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.3rem;
+    color: var(--color-white);
+    cursor: pointer;
+   } 
+   nav button#close-menu-button {
+    display: none;
+   }
+   .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+   }
+   .nav__menu li {
+    width: 100%;
+    height: 5.5rem;
+
+   }
+   .nav__menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+   }
+   .nav__menu li a :hover {
+    background-color: var(--color-bg2);
+    color: var(--color-white);
+   }
 }
