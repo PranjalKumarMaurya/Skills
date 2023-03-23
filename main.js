@@ -2,7 +2,7 @@
 
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle
-    ('window-scroll', window.scrollY > 250)
+    ('window-scroll', window.scrollY > 170)
 })
 
 //show hidden faq answer
