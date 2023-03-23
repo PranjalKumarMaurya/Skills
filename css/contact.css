@@ -1,0 +1,113 @@
+:root {
+    --color-primary: #6c66ff; 
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842; 
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: #f0f0f0;
+    --color-black: #000000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424897;
+ 
+    --container-width-lg: 90%;
+    --container-width-md: 100%;
+    --container-width-sm: 94%;
+ 
+    --transition: all 400ms ease;
+ }
+ 
+
+.contact {
+    background: var(--color-bg1);
+    
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 10rem;
+    margin-top: 15rem;
+    border-radius: 1rem;
+}
+
+.contact-aside {
+    margin-top: 2rem;
+    background: var(--color-primary);
+    /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); */
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+.aside-img {
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12rem;
+} 
+.contact-aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.contact-aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    object-fit: scale-down;
+}
+.contact-details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact-socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+.contact-socials a {
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+.contact-socials a:hover {
+    background: transparent;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.form-name {
+    display: flex;
+    gap: 1.2rem;
+}
+.contact-form input[type="text"] {
+    width : 50%;
+}
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: #f0f0f0;
+}
+.contact .button {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.footer {
+    margin-top: 12rem;
+}

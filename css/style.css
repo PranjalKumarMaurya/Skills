@@ -22,7 +22,7 @@
    --color-bg2: #424897;
 
    --container-width-lg: 90%;
-   --container-width-md: 90%;
+   --container-width-md: 100%;
    --container-width-sm: 94%;
 
    --transition: all 400ms ease;
@@ -110,9 +110,9 @@ nav {
 }
 .window-scroll {
     transition: 1.5s ease;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.7);
     /* background: var(--color-primary); */
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 .nav__container {
     height: 100%;
@@ -162,7 +162,8 @@ header {
 .categories {
     /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
     margin-bottom: 5rem;
-    height: 380px;
+    margin-top: 5rem;
+    height: 400px;
     object-fit: dense;
     background-color: var(--color-bg1);
 }
@@ -172,7 +173,7 @@ header {
 }
 .categories_left {
     margin-top: 2rem;
-    margin-right: 4rem;
+    margin-right: 2rem;
 }
 .categories_container {
     display: grid;
@@ -362,13 +363,15 @@ header {
     z-index: -1;
 }
 
-/* -------------------Testimonials-------------------- */
+/* -------------------Footer-------------------- */
 
 footer {
     background: var(--color-bg2);
     color: #f0f0f0;
-    padding: 5rem 5rem;
-    margin-top: 12rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 10rem;
 }
 .footer_container {
     display: grid;
@@ -395,23 +398,25 @@ footer {
     gap: 1rem;
     font-size: 1.3rem;
     grid-column: 4;
+    margin-top: -5rem;
 }
 .footer_socials a{
     color: #f0f0f0;
 }
 .footer_copyright {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: -2rem;
     margin-bottom: 0;
     padding: 1.2rem 0;
-    border-top: 1px solid var(--color-bg2);
+    border-top: 1px solid var(--color-bg);
 }
 
 /* -------------------Media Queries (Tablets)-------------------- */
 
-@media screen and (max-width: 1024px) {
+@media(max-width: 1024px) {
     .container {
-        width: var(--container-width-md);
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     h1 {
         font-size: 2rem;
@@ -441,7 +446,7 @@ footer {
    .nav__menu {
     position: fixed;
     top: 5rem;
-    right: 5%;
+    right: 8rem;
     height: fit-content;
     width: 18rem;
     flex-direction: column;
@@ -450,8 +455,8 @@ footer {
    .nav__menu li {
     width: 100%;
     height: 5.5rem;
-
    }
+
    .nav__menu li a {
     background: var(--color-primary);
     box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
@@ -460,8 +465,72 @@ footer {
     display: grid;
     place-items: center;
    }
-   .nav__menu li a :hover {
+   .nav__menu li a:hover {
     background-color: var(--color-bg2);
     color: var(--color-white);
    }
-}
+
+   /*--------------Header--------------*/
+
+   header {
+       height: 52vh;
+       margin-bottom: 1rem;
+   }
+   .header__container {
+       gap: 0;
+       padding-bottom: 3rem;
+   }
+   
+   /*--------------Categories--------------*/
+   
+   .categories {
+       height: fit-content;
+       width: fit-content;
+       padding-bottom: 2rem;
+       padding-right: 5rem;
+   }
+   .categories_left h1 {
+       margin-top: 1rem;
+   }
+   
+   /*--------------Courses--------------*/
+   
+   .courses {
+       margin: 2rem 0 2rem;
+   }
+   .courses h2 {
+       margin-left: 0;
+       margin-bottom: 3rem;
+   }
+   
+   /*--------------FAQs--------------*/
+   
+   .faqs {
+       padding: 2rem;
+       margin-top: 5rem;
+   }    
+   
+   /*--------------Categories--------------*/
+   
+   .testimonials_container {
+       padding-bottom: 3rem;
+   }
+   
+   
+   
+   
+   /*--------------Categories--------------*/
+   
+   footer {
+       margin-top: 0;
+       padding: 2rem;
+       padding-bottom: 2rem;
+       height: 400px;
+       object-fit: cover;
+   }
+   .footer_1 {
+       margin-right: 3rem;
+   }
+   }
+   
+   

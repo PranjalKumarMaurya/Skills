@@ -21,3 +21,22 @@ faqs.forEach(faq => {
         else icon.className = 'uil uil-plus';     
     })
 })
+
+// show/hide nav menu
+
+const menu = document.querySelector(".nav__menu");
+const menubutton = document.querySelector("#open-menu-button");
+const menuclose = document.querySelector("#close-menu-button");
+
+menubutton.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    menuclose.style.display = 'inline-block';
+    menubutton.style.display = 'none';
+})
+
+const closenav = () => {
+    menu.style.display = 'none';
+    menuclose.style.display = 'none';
+    menubutton.style.display = 'inline-block';
+}
+menuclose.addEventListener('click', closenav)
